@@ -78,13 +78,8 @@ def write_output(sorted_similarities):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        # TODO: pretty error messages
-        print("Missing path to data file")
+        print("Usage: python company_similarity.py <path_to_data_file> <input_company_url>")
     else:
-        input_url = sys.argv[1]
-        input_data = sys.argv[2]
+        input_data = sys.argv[1]
+        input_url = sys.argv[2]
         write_output(get_peers(input_url))
-        
-
-# TO DO:
-# synopsis
