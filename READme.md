@@ -5,13 +5,13 @@
 ## Setting Up Virtual Enviroment
 
 - Install a Virtualenv
- `pip install virtualenv`
+ `pip3 install virtualenv`
 - Create python virtual enviroment
  `python -m venv .venv`
 - Activate virtual enviroment
  `source .venv/bin/activate`
 - Install requirements from requirements.txt
- `pip install -r requirements.txt`
+ `pip3 install -r requirements.txt`
 
 ## Running tests
 - Run all tests
