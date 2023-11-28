@@ -25,7 +25,7 @@ def read_description(companies, url):
 def preprocess_description(description):
     lowered = description.lower()
     punctuation = ''.join([char for char in lowered if char not in string.punctuation])
-    tokens = word_tokenize(lowered)
+    tokens = word_tokenize(punctuation)
     stop_words = set(stopwords.words('english'))
     tokens = [word for word in tokens if word.lower() not in stop_words]
     lemmatizer = WordNetLemmatizer()
@@ -43,9 +43,9 @@ def text_similarity(input_company_description, company_description_to_compare):
     similarity = similarity_matrix[0, 1]
     return similarity
 
-def get_peers(company_url):
+def get_peers(company_url, input_data):
     data = read_json(input_data)
-    input_company_description = read_description(data, input_url)
+    input_company_description = read_description(data, company_url)
     result_similarities = {}
     for company in data:
         if company['url'] != company_url:
@@ -77,9 +77,9 @@ def write_output(sorted_similarities):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
+    if len(sys.argv) != 3:
         print("Usage: python company_similarity.py <path_to_data_file> <input_company_url>")
     else:
         input_data = sys.argv[1]
         input_url = sys.argv[2]
-        write_output(get_peers(input_url))
+        write_output(get_peers(input_url, input_data))

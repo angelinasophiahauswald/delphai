@@ -1,0 +1,10 @@
+swisslog.com: 0.18351160728070434
+mobile-industrial-robots.com: 0.17728676864745255
+fetchrobotics.com: 0.17570716245901657
+etranssystems.com: 0.16272368014878916
+staubli.com: 0.1558645527459687
+ulmahandling.com: 0.1530723716404778
+neobotix-robots.com: 0.1414305679255449
+iamrobotics.com: 0.1412755257521024
+gs-robot.com: 0.13751582771430604
+savoye.com: 0.1351728738252034
